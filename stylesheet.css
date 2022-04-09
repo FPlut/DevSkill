@@ -1,0 +1,38 @@
+
+body{
+    background-color: rgba(0, 0, 0, 0.897);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+  }
+  
+.LComp{
+  float: right;
+  width: 300px;
+  padding: 10px;
+}
+.why{
+  text-align: Left;
+}
+.button{
+  font-size: 20px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: #555555;
+  color: white;
+  
+}
+.button:link
