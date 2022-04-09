@@ -4,24 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-        <style>
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-
-        td, th {
-          border: 2px solid #dddddd;
-          text-align: left;
-          padding: 10px;
-        }
-        </style>
-        Ho fatto la tabella con font, border, text-align ecc ma poi ho pensato che sicuramente li faremo in css e l'ho fatta normale. 
-    -->
-        
     <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div>
@@ -30,24 +17,20 @@
         <img src="immagine.png"> 
         <h3>Nome: Francesco</h3>
         <h3>Cognome: Plutino</h3>
-        <h3>Email: francescoplutinov2@gmail.com</h3>
-        <!--
-            <h3>Email: <a href="mailto:francescoplutinov2@gmail.com">francescoplutinov2@gmail.com</a></h3>
-            Non sapendo se potevo aggiugere qualcosa che non era stata ancora spiegata ho lasciato la versione base.
-        -->
-        
+        <h3 id="email">Email: francescoplutinov2@gmail.com <button class="button" onclick= "document.location = 'mailto:francescoplutinov2@gmail.com'">Invia email</button></h3>
+            
         <hr>
     </div>
     <div>
         <h2>Descrizione</h2>
             <p>
-                Mi chiamo Francesco ho 23 e sono di Reggio Calabria. Ho conseguito il diploma come <b>Perito informatico</b> nel 2017 e negli anni a venire mi sono appassionato sempre ti più al come fossero creati i software,<br>
+                Mi chiamo Francesco ho 23 e sono di Reggio Calabria. Ho conseguito il diploma come <b>Perito informatico</b> nel 2017 e negli anni a venire mi sono appassionato sempre di più al come fossero creati i software,<br>
                  e a quali potenzioalità e pericoli si potessero celare all'interno. <br>
                 Ho studiato per 6 mesi in un istituto professionale conseguendo la qualifica di <b>"Responsabile della sicurezza di reti informatiche e della protezione dei dati"</b>, <br>
                 e per altri 4 mesi ho affrontato uno stage in un'azienda di sicurezza delle reti e dati dove mi sono interessato ancora di più alla programmazione.
 
             </p>
-        <hr>
+        
     </div>
     <div>
         <table>
@@ -73,8 +56,9 @@
             </tr>
         </table>
     </div>
+    <br>
     <hr>
-    <div>
+    <div class="LComp">
         <h3> Lista di competenze acquisite:</h3>
         <ul>
             <li>Critical thinking</li>
@@ -82,7 +66,8 @@
             <li>Ottima padronanza della lingua Inglese</li>
             <li>Esaminare e scovare <b>vulnerabilità</b> in campo <b>software</b> e <b>hardware</b></li>
         </ul>
-    
+    </div>
+    <div class="LCert">
         <h3>Lista Certificazioni</h3>
         <ol>
             <li>ECDL</li>
@@ -93,8 +78,8 @@
         </ol>
     </div>
     <br>
-    <p>
-        Sono sempre stato interessato al mondo dell'informatica, grazie alla mia natura caparbia e curiosa cerco sempre di migliorare e perfezionare il modo in cui faccio le cose.<br>
+    <p class="why">
+        Sono sempre stato interessato al mondo dell'informatica, grazie alla mia natura caparbia e curiosa ho sempre cercato di migliorare e perfezionare il modo in cui faccio le cose.<br>
          Il campo dell'informatica e la programmazione in particolare mi permette di sfruttare la mia curiosità e la mia ostinazione per dare un contributo significativo al progetto o qualunque obbiettivo io mi ponga.  
     </p>
     
