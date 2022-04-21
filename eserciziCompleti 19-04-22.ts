@@ -160,7 +160,7 @@ let anno:number = prompt("inserisci un anno");
 if(anno%400==0 || anno%4==0 && anno%100!=0){
     console.log("L'anno e` bisestile");
 }else 
-    console.log("L'anno e` bisestile");
+    console.log("L'anno non e` bisestile");
 };
 
 //con switch
