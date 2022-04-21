@@ -29,7 +29,7 @@ switch(pos){
 
 
 
--------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -70,7 +70,7 @@ switch(pari){
 
 
 
--------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -128,7 +128,7 @@ switch(num1>num2 && num1>num3){
 }
 
 
--------------------------------------------------------------------------------------------------------------------
+
 
 
 /*
@@ -142,7 +142,7 @@ let anno:number = prompt("inserisci il tuo anno di nascita");
 let anni:number = 2022 - anno;
 console.log("hai " +anni +" anni")
 
--------------------------------------------------------------------------------------------------------------------
+
 /*
 Si scriva un programma che preso in input un anno, stampi a se questo e` bisestile o meno.
 Un anno si dice bisestile SE e SOLO SE :
@@ -157,14 +157,10 @@ Otuput: "L'anno e` bisestile";
 */
 
 let anno:number = prompt("inserisci un anno");
-if(anno%400==0){
+if(anno%400==0 || anno%4==0 && anno%100!=0){
     console.log("L'anno e` bisestile");
-}else if(anno%4==0){
+}else 
     console.log("L'anno e` bisestile");
-}else if(anno%100==0){
-    console.log("L'anno e` bisestile");
-}else{
-    console.log("L'anno non e` bisestile")
 };
 
 //con switch
@@ -173,7 +169,7 @@ let anno:number = prompt("inserisci un anno");
 
 
 
-switch(anno%400==0 && anno%4==0 && anno%100==0){
+switch(anno%400==0 && anno%4==0 && anno%100!=0){
     case true:
         console.log("l'anno e` bisestile");
         break;
@@ -181,4 +177,3 @@ switch(anno%400==0 && anno%4==0 && anno%100==0){
         console.log("L'anno non e` bisestile")
         break;
 }
--------------------------------------------------------------------------------------------------------------------
