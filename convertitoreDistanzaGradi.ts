@@ -25,9 +25,6 @@
 // Input: "Unita` di misura originale" KM
 // Output: "Il valore convertito e`: 62,13 MI"
 
-
-//convertitoreDistanzaGradi v1 
-
 function convertitoreInKm(miglia:number):number{
     let migliaKm:number= miglia * 1.609;
     return migliaKm
@@ -45,44 +42,46 @@ function convertitoreInC(fahrenheit:number):number{
     let fC:number= (fahrenheit - 32 ) /1.8;
     return fC
 }
+function stampR(result:string):void{
+    console.log(result)
+}
 
-
-function whichM(risposta:number):void{
+function whichM(risposta:number):string{
 
     let unitM:string=prompt("Inserisci l'unita` di misura originale");
     let misurazioneO:number=prompt("Inserisci la misurazione originale")*1;
-    
+    const message:string = "Il valore convertito e' "
     if (risposta == 1){
         
         if (unitM == "c" ||unitM == "C"){
             
         
-           console.log("Il valore convertito e`" + convertitoreInF(misurazioneO) + " F")
+           return message + convertitoreInF(misurazioneO) + " F"
 
         }else if (unitM == "f" ||unitM == "F"){
 
-            console.log("Il valore convertito e`" + convertitoreInC(misurazioneO) + " C")
+            return message + convertitoreInC(misurazioneO) + " C"
 
         }else{
-            console.log("Riprova")
+            return "Riprova"
         }
 
     }else if(risposta == 2){
         if (unitM == "km" ||unitM == "Km" ||unitM == "KM" ||unitM == "kM"){
 
-           console.log("Il valore convertito e`" + convertitoreInMi(misurazioneO) + " MI")
+           return message + convertitoreInMi(misurazioneO) + " MI"
 
         }else if (unitM == "mi" ||unitM == "Mi" ||unitM == "MI" ||unitM == "mI"){
 
-           console.log("Il valore convertito e`" + convertitoreInKm(misurazioneO) + " KM")
+           return message + convertitoreInKm(misurazioneO) + " KM"
 
         }else{
-            console.log("Riprova")
+            return "Riprova"
         }
     }else{
-        console.log("Riprova")
+        return "Riprova"
     }
 }
 
 let misure:number = prompt("Che tipo di misurazione vuoi convertire? [1 per Gradi/ 2 per Distanza]");
-whichM(misure)
+stampR(whichM(misure))
