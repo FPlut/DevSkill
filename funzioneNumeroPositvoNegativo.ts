@@ -18,6 +18,6 @@ function stampR(result:string):void{
     console.log(result)
 }
 
-let num1:number = prompt("inserisci il numero");
+let num1:number = prompt("inserisci il numero")*1;
 
 stampR(posNeg(num1));

@@ -92,7 +92,7 @@ function fM(risposta:string):string{
             console.log("Riprova")
         }
 
-    }else if(furtherM == "NO" || furtherM =="No"|| furtherM =="nO" || furtherM =="no"){
+    }else if(risposta == "NO" || risposta =="No"|| risposta =="nO" || risposta =="no"){
         
         console.log("Arrivederci")
     }else{
@@ -100,10 +100,10 @@ function fM(risposta:string):string{
     }
     return costituzione
 }
+let altPesFu:any[]=[]
+altPesFu[0]=prompt("Inserisci la tua altezza in ft");
+altPesFu[1] = prompt("Inserisci il tuo peso in Lbr");
+altPesFu[3] = prompt("Vuoi effettuare una misurazione precisa? Rispondi con un si o un no");
 
-let altezza:number=prompt("Inserisci la tua altezza in ft")*1;
-let peso:number = prompt("Inserisci il tuo peso in Lbr")*1;
-let furtherM:string = prompt("Vuoi effettuare una misurazione precisa? Rispondi con un si o un no");
-
-console.log(cBmi(cAndC(altezza,peso)));
-console.log(fM(furtherM));
+console.log(cBmi(cAndC(altPesFu[0],altPesFu[1])));
+console.log(fM(altPesFu[3]));

@@ -9,11 +9,11 @@ function maiuscolo(nome:string, cognome:string,):string{
     return result
 }
 
+let nomeCognome:string[]=[];
+nomeCognome[0] = prompt("inserisci il tuo nome");
+nomeCognome[1] = prompt("inserisci il tuo cognome");
 
-let nome:string = prompt("inserisci il tuo nome");
-let cognome:string = prompt("inserisci il tuo cognome");
-
-console.log(maiuscolo(nome, cognome))
+console.log(maiuscolo(nomeCognome[0], nomeCognome[1]))
 
 
 
@@ -29,8 +29,8 @@ function minuscolo(nome:string, cognome:string,):string{
     return result
 }
 
+let nomeCognomeM:string[]=[];
+nomeCognomeM[0] = prompt("inserisci il tuo nome in maiuscolo");
+nomeCognomeM[1] = prompt("inserisci il tuo cognome maiuscolo");
 
-let nomeM:string = prompt("inserisci il tuo nome in maiuscolo");
-let cognomeM:string = prompt("inserisci il tuo cognome maiuscolo");
-
-console.log(minuscolo(nomeM, cognomeM))
+console.log(minuscolo(nomeCognomeM[0], nomeCognomeM[1]))
