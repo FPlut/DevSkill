@@ -1,0 +1,7 @@
+{
+  "name": "CurriculumVitae",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
