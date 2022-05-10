@@ -1,0 +1,53 @@
+<ion-header></ion-header>
+
+<ion-content>
+
+
+  <ion-grid class="set-grid">
+    <ion-col>
+      <ion-row>
+        <ion-col style="height:3rem">
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <img src="../../../assets/logo_devskill.png" alt="DevSkillLogo">
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col style="height:3rem">
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <h1>Benvenuti!</h1>
+          <h6> <br>
+            <hr>Inserisci un numero che sarà la posizione dell'Ugly Number.
+          </h6>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-row></ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-item>
+          <ion-label position="floating"> Posizione n°</ion-label>
+          <ion-input [(ngModel)]="chosen"> </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button (click)="stampaR(chosen)">Trova il numero</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <h1>L'Ugly Number nella posizione scelta è {{result}} </h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

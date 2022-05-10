@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'curriculum-vitae',
     loadChildren: () => import('./pages/curriculum-vitae/curriculum-vitae.module').then( m => m.CurriculumVitaePageModule)
   },
+  {
+    path: 'uva136',
+    loadChildren: () => import('./pages/uva136/uva136.module').then( m => m.Uva136PageModule)
+  },
 ];
 
 @NgModule({

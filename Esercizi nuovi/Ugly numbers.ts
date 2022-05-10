@@ -1,7 +1,7 @@
-let count = 0;
-let chosen =+prompt("Enter the position of your favourite ugly number");
+let count:number = 0;
+let chosen:number =+prompt("Enter a number which will be the position of an ugly number");
 //let chosen:number=1500;//ci mette un po' ma funziona.
-let i = 1;
+let i:number = 1;
 
 function stampaR(n:number):void{
     while (count < n) {
