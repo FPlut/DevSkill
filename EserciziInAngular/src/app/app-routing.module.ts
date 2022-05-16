@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'uva100',
+    redirectTo: 'array-sort',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'uva136',
     loadChildren: () => import('./pages/uva136/uva136.module').then( m => m.Uva136PageModule)
+  },
+  {
+    path: 'array-sort',
+    loadChildren: () => import('./pages/array-sort/array-sort.module').then( m => m.ArraySortPageModule)
   },
 ];
 

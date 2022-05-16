@@ -1,0 +1,43 @@
+<ion-content>
+  <ion-grid class="set-grid">
+
+    <app-img-title title="Benvenuti!" desc="Questa app permette di ordinare in modo crescente o decrescente un array.">
+    </app-img-title>
+    <ion-row></ion-row>
+    <form [formGroup]="mioForm">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating"> Inserisci un numero </ion-label>
+            <ion-input clear-on-edit id="numero" formControlName="numero" [(ngModel)]="num" type="number"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+    
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="sceltaOrdinamento(arrayN, true)">Crescente</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="popolaArray()">Aggiungi numero</ion-button>
+      </ion-col>
+      <ion-col style="text-align: right">
+        <ion-button (click)="sceltaOrdinamento(arrayN, false)">Decrescente</ion-button>
+      </ion-col>
+    </ion-row>
+    <!--<ion-row>
+      <ion-col style="text-align: left">
+        <h1>Il tuo array </h1>
+      </ion-col>
+    </ion-row>-->
+    <ion-row>
+      <ion-col style="text-align: left">
+        <h1>Array Ordinato [ {{arrayOrd}} ] </h1>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>
