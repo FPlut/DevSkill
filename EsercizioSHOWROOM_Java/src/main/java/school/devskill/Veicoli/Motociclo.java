@@ -3,9 +3,7 @@ package school.devskill.Veicoli;
 
 import lombok.Getter;
 import lombok.Setter;
-import school.devskill.Gestore.GestoreUtility;
-
-import java.util.HashSet;
+import school.devskill.Utility.GestoreUtility;
 
 @Getter
 @Setter

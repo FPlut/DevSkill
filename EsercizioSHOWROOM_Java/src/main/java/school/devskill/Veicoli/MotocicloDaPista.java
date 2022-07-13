@@ -6,6 +6,7 @@ import lombok.Setter;
 import java.util.HashSet;
 @Getter
 @Setter
+
 public class MotocicloDaPista extends Motociclo{
 
     Gomme.TipoGomme gomme;

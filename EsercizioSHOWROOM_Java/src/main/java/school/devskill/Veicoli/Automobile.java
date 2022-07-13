@@ -1,7 +1,7 @@
 package school.devskill.Veicoli;
 
 
-import school.devskill.Gestore.GestoreUtility;
+import school.devskill.Utility.GestoreUtility;
 
 public class Automobile extends school.devskill.Veicoli.Veicolo {
     Integer cilindrata;
