@@ -53,7 +53,7 @@ public void reset() throws NoPlayerExeption {
         isOver = false;
     for (Player playerCorrente : players) {
         playerCorrente.setPosition(0);
-        playerCorrente.setnThrow(0);
+        playerCorrente.setNThrow(0);
         playerCorrente.setStop(false);
     }
 }
@@ -78,7 +78,7 @@ public void reset() throws NoPlayerExeption {
                 if (arrivalBoxTmp >= sizeBoard){
                     isOver = true;
                     onGoing=false;
-                    winner= "Il giocatore "+current.getName() + " ha vinto con "+ (current.getnThrow() + 1) + " lanci di dado.";
+                    winner= "Il giocatore "+current.getName() + " ha vinto con "+ (current.getNThrow() + 1) + " lanci di dado.";
                     throw new GameisOverExeption();
                 }
 
