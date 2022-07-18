@@ -1,8 +1,7 @@
 package school.devskill.exeption;
 
-public class OngoingGameExeption extends Exception {
+public class OngoingGameExeption extends RuntimeException {
 
-    public OngoingGameExeption() {
-        super("azione non permessa, gioco in corso!");
+    public OngoingGameExeption (String message) { super(message);
     }
 }

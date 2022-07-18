@@ -4,5 +4,4 @@ import school.devskill.web.interfaces.IGameController;
 import school.devskill.theMazeGame.command.MoveCommand;
 
 public interface IGameControllerMaze extends IGameController {
-    String MovePlayer(MoveCommand command);
-}
+    String MovePlayer(MoveCommand command);}

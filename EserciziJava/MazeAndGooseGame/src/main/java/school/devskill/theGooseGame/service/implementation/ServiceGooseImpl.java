@@ -47,7 +47,7 @@ public class ServiceGooseImpl implements IServiceGoose {
     }
     public String addPlayer(Player p ) throws OngoingGameExeption {
         if(onGoing){
-            throw new OngoingGameExeption();
+            throw new OngoingGameExeption("Azione non permessa, gioco in corso!");
         }
         players.add(p);
         return "Giocatore "+ p.getName()+ " aggiunto";
@@ -59,7 +59,7 @@ public class ServiceGooseImpl implements IServiceGoose {
         try {
             Thread.sleep(250);
         } catch (InterruptedException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
         return random.nextInt(7-1) + 1;
     }

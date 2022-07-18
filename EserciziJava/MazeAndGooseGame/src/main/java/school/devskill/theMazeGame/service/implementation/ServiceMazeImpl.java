@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import school.devskill.exeption.ActionNotPermitedException;
 import school.devskill.exeption.GameisOverExeption;
 import school.devskill.exeption.NoPlayerExeption;
+import school.devskill.exeption.OngoingGameExeption;
 import school.devskill.theMazeGame.service.interfaces.IServiceMaze;
 import school.devskill.theMazeGame.utility.mazePath;
 
@@ -21,7 +22,7 @@ public class ServiceMazeImpl implements IServiceMaze {
     private final String [] [] matrix = new String [maxRows] [maxColumns];
     private final String [] [] matrixMasked = new String [maxRows] [maxColumns];
 
-    private List<mazePath> path = new ArrayList<>();
+    private final List<mazePath> path = new ArrayList<>();
 
     public ServiceMazeImpl() {
         matrixInitializer();
@@ -90,13 +91,13 @@ public class ServiceMazeImpl implements IServiceMaze {
     @Override
     public String gameStatus() {
         String welcomeMsg = "Benvenuto nel labirinto!\nLe s indicano il sentiero calpestabile, la u sarà l'uscita.\nBuonaFortuna\n\n";
-        String result1 ="";
-        String result2 ="";
+        StringBuilder result1 = new StringBuilder();
+        StringBuilder result2 = new StringBuilder();
         for(int r = 0; r< maxRows; r++){
             for(int c = 0; c< maxColumns; c++){
                 if(r==Rplayer&&c==Cplayer){
-                    result1 +="p";
-                    result2 +="p";
+                    result1.append("p");
+                    result2.append("p");
                 }else{
                     if(Rplayer==0 && Cplayer==0 && !(matrix[Rplayer][Cplayer].equals("u"))){
                         matrixMasked[Rplayer][Cplayer+1]=matrix[Rplayer][Cplayer+1];
@@ -119,26 +120,26 @@ public class ServiceMazeImpl implements IServiceMaze {
                         matrixMasked[Rplayer-1][Cplayer]=matrix[Rplayer-1][Cplayer];
                         matrixMasked[Rplayer][Cplayer+1]=matrix[Rplayer][Cplayer+1];
                     }
-                    result1+= matrix[r][c];
-                    result2+= matrixMasked[r][c];
+                    result1.append(matrix[r][c]);
+                    result2.append(matrixMasked[r][c]);
                 }
 
             }
 
-            result1+="\n";
-            result2+="\n";
+            result1.append("\n");
+            result2.append("\n");
         }
         if(matrix[Rplayer][Cplayer].equals("u")){
-            return result1;
+            return result1.toString();
         }
         return welcomeMsg+result2;
     }
 
     @Override
-    public String reset() throws NoPlayerExeption {
+    public String reset() throws OngoingGameExeption {
         String message = "Partita resettata.\n";
         if(Rplayer==0 && Cplayer==0){
-            throw new NoPlayerExeption("Non e'stata fatta ancora una mossa");
+            throw new OngoingGameExeption("Non e'stata fatta ancora una mossa");
         }
         matrixInitializer();
         Rplayer=Cplayer=0;

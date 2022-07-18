@@ -27,7 +27,7 @@ public class GameControllerOca extends GameController implements IGameController
     @PostMapping(HTTPUtility.ADDPLAYER)
 
     public String addPlayer(@RequestBody InfoPlayer i) {
-        String message = "";
+        String message;
         try {
             message = ((IServiceGoose) boardManager).addPlayer(micheal.convertValue(i, Player.class));
         } catch (OngoingGameExeption e) {
@@ -35,13 +35,11 @@ public class GameControllerOca extends GameController implements IGameController
             return e.getMessage();
         }
         return message;
-
     }
 
     @PostMapping(HTTPUtility.PLAYROUND)
 
     public String playRound() throws NoPlayerExeption {
-        String message = "";
         try {
             ((IServiceGoose)boardManager).playRound();
         } catch (NoPlayerExeption e) {
